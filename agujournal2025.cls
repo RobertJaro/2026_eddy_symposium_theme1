@@ -814,6 +814,26 @@ vanchor=t,
 
 \typeout{ELSE not published^^J}
 
+%% introduce otherwise not defined commands, even if not used.
+\newcommand{\authoraddr}[1]{}
+\newcommand{\authorrunninghead}[1]{}
+\newcommand{\titlerunninghead}[1]{}
+\newcommand{\tablenotetext}[2]{\linebreak#1#2}
+\newcommand{\maketitle}{}
+\newenvironment{plainlanguagesummary}
+    {
+        \par
+        \vspace*{6pt}
+        \noindent
+        \textbf{Plain Language Summary}\\
+        \begingroup
+        \raggedright
+    }
+    {
+        \par
+        \endgroup
+    }
+    
 %% From original AGU Class File by Amy Hendrickson
 %%
 
@@ -1306,7 +1326,7 @@ vanchor=t,
 %% \thejournalname set with \journalname{} command; if not you will get a request to set
 %% the journal name with \journalname{}
 \def\@oddhead{\vbox to 0pt{\vss\centerline{\color{ltgray}\small manuscript
-submitted to {\it \thejournalname}}\vspace24pt}}
+submitted to {\it \thejournalname}}\vskip24pt}}
 \let\@evenhead\@oddhead
 }
 
@@ -1354,13 +1374,13 @@ submitted to {\it \thejournalname}}\vspace24pt}}
 
 %% Article Title
 \def\title#1{\global\c@footnote=0\relax%
-{\centering \Large\bf #1 \vspace14pt}
+{\centering \Large\bf #1 \vskip14pt}
 \def\thetitle{#1}}
 
-\def\authors#1{{\centering \normalsize\bf #1\vspace12pt}}
+\def\authors#1{{\centering \normalsize\bf #1\vskip12pt}}
 \def\affil#1{$^{#1}$\ignorespaces}
-\def\affiliation#1#2{\vspace-.5\parskip\relax{\centering{\footnotesize
-$^{#1}$#2\relax}\vspace-\parskip}}
+\def\affiliation#1#2{\vskip-.5\parskip\relax{\centering{\footnotesize
+$^{#1}$#2\relax}\vskip-\parskip}}
 
 \def\correspondingauthor#1#2{{\let\@thefnmark\relax\@footnotetext{\noindent\vrule
 height 18pt width0pt\relax\hbox to-8pt{}{\small
@@ -1374,16 +1394,35 @@ Corresponding author: #1,
                 \hss\@textsuperscript{\normalfont\@thefnmark}}##1}\footnote{#1}\
 		}}
 
-\def\keypoints{\vspace24pt\vspace1sp\subsection*{Key Points:}
-\vspace*{-\marginparentrysep}
-\begin{itemize}[itemsep=1pt]%[noitemsep]
-}
-\def\endkeypoints{\end{itemize}}
 
-\def\abstract{\newpage\noindent{\bf Abstract}\vspace-\parskip
+% define keypoints as in 2025 template to ensure compatibility
+\newcommand{\printnonemptyitem}[1]{%
+      \makeatletter
+      \sbox0{#1}%
+      \ifdim0pt=\dimexpr\wd0+\ht0+\dp0%=0pt % Check width + height + depth is zero; handles spaces.
+                                       \relax
+      \else
+           \item #1
+      \fi
+      \makeatother
+} % end \printnonemptyitem
+\newcommand{\thekeypoints}{%
+    \vspace*{-9pt}
+    \begin{itemize}
+}
+\def\keypoints#1#2#3{%
+    \section*{Key points}
+    \begin{itemize}
+        \printnonemptyitem{#1}
+        \printnonemptyitem{#2}
+        \printnonemptyitem{#3}
+    \end{itemize}
+}
+
+\def\abstract{\newpage\noindent{\bf Abstract}\vskip-\parskip
 \global\c@footnote=0\relax%
 \noindent\ignorespaces}
-\def\endabstract{\vspace18pt}
+\def\endabstract{\vskip18pt}
 
 %% <== End Title page and Abstract
 
@@ -1561,12 +1600,12 @@ Corresponding author: #1,
   %% then make it format in a paragraph, otherwise center it.
 
   %% Test to see if it a figure or table: \ifx\@captype\xfigure
-  %% If figure, \vspace\belowcaptionskip
+  %% If figure, \vskip\belowcaptionskip
 
 \long\def\@makecaption#1#2{%
 {\small
 \ifx\@captype\xfigure
-\vspace\abovecaptionskip\fi
+\vskip\abovecaptionskip\fi
 {\ifturnofflinenums\else\ifnumlines\internallinenumbers\fi\fi
  \sbox\@tempboxa{\bf#1.\quad \rm #2}%
   \ifdim \wd\@tempboxa >.9\hsize
@@ -1574,11 +1613,11 @@ Corresponding author: #1,
   \else
 {\centering
  \bf #1.\rm\quad #2
-\vspace1sp}
+\vskip1sp}
   \fi}
 %%
 \ifx\@captype\xfigure\else
-  \vspace\belowcaptionskip\fi
+  \vskip\belowcaptionskip\fi
 }}
 
 
@@ -1627,12 +1666,12 @@ Corresponding author: #1,
   %% \noalign is a command that allows the uses to put something
   %% between lines in a table.
 \let\savehline\hline
-\def\hline{\noalign{\vspace3pt}\savehline\noalign{\vspace3pt}}
+\def\hline{\noalign{\vskip3pt}\savehline\noalign{\vskip3pt}}
 
   %% Simple macro for table notes, that makes sure that there is
   %% a little space between the table and the notes, and that they
   %% print in footnotesize.
-\def\tablenotes{\vspace2pt\footnotesize}
+\def\tablenotes{\vskip2pt\footnotesize}
 \let\endtablenotes\relax
 
   %%% <<=== end Figure and Table Captions
@@ -1836,7 +1875,7 @@ sys-tem-at-i-cal-ly
 \section*{Glossary}
 \description
 \def\term##1{\item[##1]}}
-\def\endglossary{\enddescription\vspace12pt\egroup}
+\def\endglossary{\enddescription\vskip12pt\egroup}
 %%
 
 %% Acronyms
@@ -1844,17 +1883,17 @@ sys-tem-at-i-cal-ly
 \section*{Acronyms}
 \description
 \def\acro##1{\item[##1]}}
-\def\endacronyms{\enddescription\vspace12pt\egroup}
+\def\endacronyms{\enddescription\vskip12pt\egroup}
 
 %% Notation
 \def\notation{\bgroup
 \section*{Notation}
 \description
 \def\notation##1{\item[\boldmath ##1]}}
-\def\endnotation{\enddescription\vspace12pt\egroup}
+\def\endnotation{\enddescription\vskip12pt\egroup}
 
 %% Acknowledgments
-\def\acknowledgments{\vspace12pt\noindent{\bf
+\def\acknowledgments{\vskip12pt\noindent{\bf
 Acknowledgments\vrule depth 6pt
 width0pt\relax}\\*\noindent\ignorespaces}
 
@@ -2021,10 +2060,10 @@ width0pt\relax}\\*\noindent\ignorespaces}
 %
 %%%
 %\def\xexplain[#1]#2{\ifdraft\marginpar{\noindent{\color{red}\llap{\boldmath$\leftarrow$}\draftfalse\normalsize
-%\baselineskip=11pt\relax[#1] #2\vspace1sp}}\fi}
+%\baselineskip=11pt\relax[#1] #2\vskip1sp}}\fi}
 %
 %\def\yexplain#1{\ifdraft\marginpar{\noindent{\color{red}\llap{\boldmath$\leftarrow$}\draftfalse\normalsize
-%\baselineskip=11pt\relax#1\vspace1sp}}\fi}
+%\baselineskip=11pt\relax#1\vskip1sp}}\fi}
 %
 %
 %\newcount\listchangenum
@@ -2034,15 +2073,15 @@ width0pt\relax}\\*\noindent\ignorespaces}
 %\ifdraft
 %\ifnum\refchangenumber>0
 %\ifnumlines\nolinenumbers\fi
-%\vspace36pt
+%\vskip36pt
 %\vtop{\hrule
 %\noindent{\vrule height 9pt width0pt depth 6pt\large\bf List of Changes}
 %\hrule
-%\vspace18pt}
+%\vskip18pt}
 %\nobreak
 %{\parskip=4pt \parindent-18pt \leftskip=18pt
 %\loop
-%\vspace-1pt\relax
+%\vskip-1pt\relax
 %\global\advance\listchangenum by 1\relax
 %\expandafter\ifx\csname changenum\the\listchangenum\endcsname\relax
 %\else
@@ -2063,8 +2102,8 @@ width0pt\relax}\\*\noindent\ignorespaces}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 14) Supporting Information
 \def\supportinginfo#1{\newpage
-{\large\bf\noindent Supporting  Information for\vspace-6pt\noindent``#1''}
-\vspace12pt}
+{\large\bf\noindent Supporting  Information for\vskip-6pt\noindent``#1''}
+\vskip12pt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Start page numbering, formatting
@@ -2075,9 +2114,8 @@ width0pt\relax}\\*\noindent\ignorespaces}
 \ifdraft
 \RaggedRight
 \fi
-
-
 \endinput
+
 
 
 \fi  % End non-published style  DC
