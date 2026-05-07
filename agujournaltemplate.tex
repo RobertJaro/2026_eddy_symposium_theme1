@@ -3,220 +3,290 @@
   draft
 ]{agujournal2025}
 
-
 \begin{document}
 
+\journalname{Perspectives of Earth and Space Scientists}
 
-\journalname{Journal name}
-
-% Your title can be multiple lines long.
-\title{Title of your paper}
-
+\title{From Solar Variability to Planetary Response: A Roadmap for Predictive Sun-to-Planet Coupling}
 
 \authors{%
-                  Your First Author Name\affil{their author footnote number, e.g., 1 or 1,2}\thanks{their additional affilation address and/or funding information},
-	          % Repeat the above for each author, with commas between authors, e.g.:
-                  Your Second Author Name\affil{their author footnote number, e.g., 2 or 2,3}\thanks{their affiliation address and/or funding information}
-	      }
-	      
+  Author One\affil{1},
+  Author Two\affil{2},
+  Author Three\affil{1,3}
+}
 
-% Repeat for all authors:	      
-\affiliation{1}{their affiliation when they (co-)wrote the paper} % First argument is their footnote number, as above.
+\affiliation{1}{Affiliation placeholder: Institution, Department, City, State/Province, Country}
+\affiliation{2}{Affiliation placeholder: Institution, Department, City, State/Province, Country}
+\affiliation{3}{Affiliation placeholder: Institution, Department, City, State/Province, Country}
 
+\authoraddr{Corresponding author placeholder: Name, institution, mailing address, email address}
 
-
-% Corresponding author. Do not prepend with ``SI Corresponding author: '' in published version.
-\authoraddr{%
-                      % e.g., their full name, their department, their academic institution, their building, their City, State, Zip, Country. (theiremail\@ their institution)
-                      Corresponding author name, address, etc.
-                   }
-
-
-
-\authorrunninghead{Ignored.} % Ignored.
-
-% Key points.  
-%   Takes three arguments.  Remember to specifiy them all, using {} for no item.
-%
-\keypoints%
-% {}{}{}
-%    % First key point, etc.
-    {Key point 1}{Key point 2}{Key point 3}
-%    {Summarize the main points and conclusions of the article}
-%    {Each must be 140 characters or fewer with no special characters or punctuation and must be complete sentences}
-
-% Call after \authors.
-
-% Title running heads will be ignored, too:
+\authorrunninghead{Ignored.}
 \titlerunninghead{Ignored.}
 
-% Key points was here
+\keypoints%
+{Solar influence on Earth and planetary environments requires cross-domain Sun-to-planet coupling across timescales.}
+{Predictive progress depends on benchmark events, 3D drivers, coupled response frameworks, and open uncertainty-aware workflows.}
+{This white paper provides an implementation-oriented roadmap rather than a broad mission-prioritization exercise.}
 
 \maketitle
 
-
-% Two options for abstracts: one with an abstract only and one with a plain language summary included.
-%
-%\begin{abstract}
-%    Abstract text body.
-%\end{abstract}
-
-
-\bigskip  % Remove; for demo purposes only.
-% OR:
-
 \begin{abstract}
-    Abstract text body with some more content.
-    %
-     \begin{plainlanguagesummary}
-            Plain language summary text body with some more content.
-     \end{plainlanguagesummary}
-     %
-     % Do not put more abstract text body here!
+Solar variability affects Earth and planetary environments through a connected chain of processes linking solar drivers, heliospheric structure, and geospace or planetary response. This white paper defines a focused roadmap for turning solar influence on Earth and planetary environments into an integrated, predictive Sun-to-planet framework. It does not duplicate the Decadal Survey by setting broad mission or program priorities. Instead, it identifies interdisciplinary gaps, benchmark events and intervals, shared data products, modeling capabilities, and community actions that can connect solar drivers, heliospheric propagation, and environmental response \cite{placeholder}.
+
+\begin{plainlanguagesummary}
+Solar variability affects Earth and other planetary environments through both long-term changes and short-lived events. Prediction remains difficult because solar, heliospheric, and geospace observations and models are often developed separately. This paper identifies practical steps to connect these communities, including shared benchmark events, open data products, improved three-dimensional descriptions of solar drivers, coupled response models, and uncertainty-aware workflows.
+\end{plainlanguagesummary}
 \end{abstract}
 
-
-\section{Section Name}  % Or first section name if you have not introduction.
-
-Section text.
-
-
-\subsection{Subsection Name}
-
-Subsection text.
-
-
-\subsubsection{Subsubsection Name}
-
-
-\paragraph{Paragraph Name}
-Paragraph text.
+\section{Motivation and Scope}
+% TODO: Purpose
+% Explain why solar influence on Earth and planetary environments requires an integrated, cross-domain perspective.
 %
-% No paragraph space here unless really starting a new paragrah.
-
-New paragraph.
+% TODO: Main points
+% - Solar influence acts across timescales: solar minimum, solar cycle, storms, CMEs, ICMEs, SEPs.
+% - Planetary impacts depend on the full chain from solar driver to heliospheric propagation to environmental response.
+% - Current work is often fragmented across solar, heliospheric, geospace, and planetary communities.
+% - This white paper is not a Decadal Survey replacement; it is an implementation-oriented community roadmap.
+% - The paper should be accessible to the broader Earth and space science community.
 %
-% Use description environment for definition lists.
-\begin{description}
-    \item[First] First description.
-    \item[Second] Second description
-\end{description}
+% TODO: Expected output
+% - One-page introduction.
+% - One schematic figure of the Sun-to-planet chain.
 
-Section text.
-% No paragraph space here unless really starting a new paragrah.
- \begin{equation}
- x^2=y^2 + z^2
- \end{equation}
-Section text.
-%
-\begin{enumerate}
-    \item List item text.
-        \begin{enumerate} % Can nest lists.
-          \item List item text.
-          \item List item text.
-        \end{enumerate}
-    \item List item text.
-\end{enumerate}
-% No paragraph space here unless really starting a new paragrah.
-Section text.
-% No paragraph space here unless really starting a new paragrah.
-\begin{itemize}
-    \item List item text.
-        \begin{itemize}
-          \item List item text. 
-          \item List item text.
-        \end{itemize}
-    \item List item text.
-\end{itemize}
-% No paragraph space here unless really starting a new paragrah.
-Section text.
+Placeholder introduction text. This section should motivate a predictive Sun-to-planet framework that connects solar variability, heliospheric propagation, and environmental response across Earth and planetary systems \cite{placeholder}. It should frame the white paper as an implementation-oriented community roadmap rather than a broad mission-prioritization exercise.
 
-ShortCite CitekeyArticle \cite{CitekeyArticle}, ShortCiteA CitekeyBook \citeA{CitekeyBook}. 
-
-\textsf{This is the sans serif font.}
-
- \texttt{This is the mono font.}
- 
- % Footnotes will generate an error on the page and in the console.
-
-% Program code:
-\begin{verbatim}  
-   This is verbatim text where macro names are shown rather than expanded, e.g., \LaTeX.
-\end{verbatim}
-
-Section text.
-
-
-
-%% Figures can float away from where you insert them.
-%%
-%\begin{figure}[h]
-%    \includegraphics[width=\textwidth]{figure-textwidth.png}
-%    \caption{Figure caption.}
-%\end{figure}
-%
-%% Figures too wide for the text width will go off the right edge.
-%\begin{figure*}
-%        \includegraphics[width=41pc]{figure-wide.pdf} 
-%        \caption{Figure caption.}
-%\end{figure*}%{fullwidthfloat}
-
-Section text.
-
-
-% You do not have to change the table numbers.  That's automagic.
-%    RE: \settablenum{S1} % Change number for each table
-
-% Tables that are wider than the text width will run off the right side.
-% You can also make fancier tables.
-\begin{table}
-\caption{Table caption.}
+\begin{figure}[h]
 \centering
-\begin{tabular}{l c}
-    \hline
-        Run  & Time (min)  \\
-   \hline
-      $l1$  & 260   \\
-      $l2$  & 300   \\
-      $l3$  & 340   \\
-    \hline
+\fbox{\begin{minipage}[c][2.0in][c]{0.85\textwidth}
+\centering
+Placeholder schematic: Sun-to-planet chain across timescales.
+\end{minipage}}
+\caption{Schematic of the Sun-to-planet chain across timescales, spanning solar minimum, solar-cycle variability, storms, CMEs, ICMEs, SEPs, heliospheric propagation, and geospace or planetary response.}
+\label{fig:sun-to-planet-chain}
+\end{figure}
+
+\section{Science Goal 1: Inferring the 3D Plasma and Magnetic Structure of Heliospheric Drivers}
+% TODO: Purpose
+% Describe the need to reconstruct solar and heliospheric drivers in 3D, including plasma and magnetic structure, before they impact Earth or other planetary environments.
+%
+% TODO: Core science question
+% How can we infer the 3D plasma and magnetic structure of solar and heliospheric transients from sparse observations, and how does that structure evolve through the heliosphere?
+%
+% TODO: Main points
+% - Line-of-sight projection effects limit interpretation of solar observations.
+% - CME and ICME magnetic-field orientation and structure are poorly constrained before impact.
+% - Sparse observations limit knowledge of heliospheric plasma structure.
+% - CME/ICME evolution through the heliosphere remains uncertain.
+% - Transport of magnetic field from the photosphere and low corona into the heliosphere is a key gap.
+% - Multipoint observations and coordinated studies are needed to constrain turbulence and solar-wind structure.
+%
+% TODO: Expected output
+% - Gap table with columns: Gap | Missing observable | Consequence for prediction | Needed capability.
+% - Optional figure or panel showing projected observations leading to inferred 3D heliospheric structure.
+
+Placeholder synthesis text. This section should identify what must be measured, inferred, and modeled to reconstruct three-dimensional plasma and magnetic structure in solar and heliospheric transients before impact \cite{placeholder}.
+
+\begin{table}[h]
+\caption{Gap table for 3D heliospheric drivers.}
+\label{tab:heliospheric-driver-gaps}
+\centering
+\begin{tabular}{p{0.21\textwidth} p{0.22\textwidth} p{0.25\textwidth} p{0.20\textwidth}}
+\hline
+Gap & Missing observable & Consequence for prediction & Needed capability \\
+\hline
+Projection-limited solar observations & 3D coronal geometry and plasma structure & Ambiguous launch conditions & Multipoint and stereoscopic constraints \\
+CME/ICME magnetic structure & Pre-impact field orientation and topology & Uncertain geoeffectiveness & Data-assimilative magnetic reconstruction \\
+Sparse heliospheric sampling & Evolving solar-wind plasma structure & Limited propagation forecasts & Coordinated in situ and remote sensing \\
+Photosphere-to-heliosphere transport & Magnetic connectivity and evolution & Weak driver boundary conditions & Coupled coronal-heliospheric modeling \\
+\hline
 \end{tabular}
-\tablenotetext{a}{Table footnote text here.}  %xxx ditto    %xxxx table footnote, not just footnote
 \end{table}
 
-Section text.
+\section{Science Goal 2: From Heliospheric Forcing to Coupled Geospace Response}
+% TODO: Purpose
+% Connect heliospheric drivers to Earth's coupled magnetosphere, ionosphere, thermosphere, radiation belt, and plasmasphere response.
+%
+% TODO: Core science question
+% How do solar-wind and CME properties control energy partitioning, plasma transport, and response across Earth's magnetosphere-ionosphere-thermosphere system?
+%
+% TODO: Main points
+% - Different CME/ICME configurations can produce different geomagnetic responses.
+% - Energy deposited through solar-wind-magnetosphere coupling is redistributed across multiple geospace domains.
+% - Key response channels include ionospheric electrodynamics, thermospheric neutral heating, ion acceleration, chemical modification, wave generation, plasma transport, radiation-belt response, and plasmasphere dynamics.
+% - Prediction requires coupling external drivers to internal geospace state variables.
+% - Analytical and numerical models need realistic constraints from observations.
+%
+% TODO: Expected output
+% - Response-chain diagram: Solar-wind / ICME driver -> magnetospheric coupling -> ionospheric electrodynamics -> thermospheric heating -> radiation belts / plasma transport -> impacts.
+% - Short synthesis of where the heliosphere-Earth interface currently breaks.
 
+Placeholder synthesis text. This section should describe how heliospheric forcing couples into the magnetosphere, ionosphere, thermosphere, radiation belts, and plasmasphere, and where driver-response frameworks currently lose predictive skill \cite{placeholder}.
 
-% Your Data Availability Statement is an unnumbered section right before the bibliography.
+\begin{figure}[h]
+\centering
+\fbox{\begin{minipage}[c][2.0in][c]{0.85\textwidth}
+\centering
+Placeholder response chain: Solar-wind / ICME driver $\rightarrow$ magnetospheric coupling $\rightarrow$ ionospheric electrodynamics $\rightarrow$ thermospheric heating $\rightarrow$ radiation belts / plasma transport $\rightarrow$ impacts.
+\end{minipage}}
+\caption{Cross-domain gap schematic or response-chain diagram linking heliospheric drivers to coupled geospace response.}
+\label{fig:cross-domain-response-chain}
+\end{figure}
+
+\section{Science Goal 3: Background State and Preconditioning Across Solar Timescales}
+% TODO: Purpose
+% Explain how long-term solar forcing and background conditions shape transient response and recovery.
+%
+% TODO: Core science question
+% How do solar-cycle and solar-minimum conditions shape the background state of Earth and planetary environments, and how does that background state modulate transient impacts?
+%
+% TODO: Main points
+% - Solar-minimum and solar-cycle forcing shape the background thermosphere, ionosphere, magnetosphere, radiation belts, and plasmasphere.
+% - Transient responses cannot be understood without the background state.
+% - Similar solar events can produce different impacts depending on preconditioning.
+% - Recovery and system memory are part of the Sun-to-planet response.
+% - Climate and weather connections should be framed carefully through upper-atmosphere, geospace, and planetary-environment response, rather than broad unsupported climate claims.
+%
+% TODO: Expected output
+% - Timescale table with columns: Timescale | Solar forcing | Response domain | Key unknown | Needed observations.
+
+Placeholder synthesis text. This section should explain how background state, solar-cycle phase, solar-minimum conditions, preconditioning, and recovery shape transient Sun-to-planet response \cite{placeholder}.
+
+\begin{table}[h]
+\caption{Timescale table for background state and transient response.}
+\label{tab:timescale-background-response}
+\centering
+\begin{tabular}{p{0.15\textwidth} p{0.20\textwidth} p{0.22\textwidth} p{0.18\textwidth} p{0.17\textwidth}}
+\hline
+Timescale & Solar forcing & Response domain & Key unknown & Needed observations \\
+\hline
+Solar minimum & Low EUV / altered solar wind & Thermosphere-ionosphere & Baseline state & Long-term monitoring \\
+Solar cycle & Irradiance / solar-wind variability & Geospace climatology & Long-term modulation & Coordinated observations \\
+Storms & CMEs / ICMEs / shocks & Coupled geospace response & Event-scale impacts & Benchmark events \\
+Recovery & Post-storm state & Plasmasphere / radiation belts & System memory & Time-continuous measurements \\
+\hline
+\end{tabular}
+\end{table}
+
+\section{Science Goal 4: Universal and Planet-Specific Responses to Solar Forcing}
+% TODO: Purpose
+% Use comparative planetary environments to identify which responses to solar forcing are universal and which depend on planet-specific properties.
+%
+% TODO: Core science question
+% Which responses to solar forcing are universal across planetary environments, and which are controlled by planet-specific properties?
+%
+% TODO: Main points
+% - Earth provides the richest data, but other planetary environments reveal which processes generalize.
+% - Key controlling factors include intrinsic magnetic field, rotation, plasma sources, atmosphere, heliocentric distance, and internal magnetospheric dynamics.
+% - Giant-planet magnetospheres can be strongly internally driven, complicating separation of solar forcing from internal dynamics.
+% - Common response metrics are needed to compare different planetary environments.
+% - Keep this section concise and focused; avoid drifting into a Theme 3 Mars/habitability paper.
+%
+% TODO: Expected output
+% - Comparative response table with columns: Environment | External driver | Internal state | Response metric | Transferable lesson.
+
+Placeholder synthesis text. This section should use comparative planetary environments to separate universal solar-forcing responses from planet-specific effects controlled by magnetic field, rotation, plasma sources, atmosphere, heliocentric distance, and internal dynamics \cite{placeholder}.
+
+\begin{table}[h]
+\caption{Comparative planetary response table.}
+\label{tab:comparative-planetary-response}
+\centering
+\begin{tabular}{p{0.17\textwidth} p{0.20\textwidth} p{0.20\textwidth} p{0.18\textwidth} p{0.17\textwidth}}
+\hline
+Environment & External driver & Internal state & Response metric & Transferable lesson \\
+\hline
+Earth & Solar wind, CMEs, ICMEs, SEPs & Coupled magnetosphere-ionosphere-thermosphere & Geomagnetic and upper-atmosphere response & Best-constrained end-to-end system \\
+Mars & Solar wind and SEP forcing & Induced magnetosphere and atmosphere & Atmospheric escape and ionospheric response & Response without a global intrinsic field \\
+Jupiter / Saturn & Solar-wind compressions & Strong internal plasma sources and rotation & Magnetospheric reconfiguration & Separating external and internal drivers \\
+Venus & Solar wind and EUV variability & Induced magnetosphere and dense atmosphere & Ionospheric and atmospheric response & Solar forcing in an unmagnetized environment \\
+\hline
+\end{tabular}
+\end{table}
+
+\section{Enabling Capabilities: Observations, Benchmarks, AI, and Uncertainty}
+% TODO: Purpose
+% Identify the tools, datasets, models, and community products needed to answer the science questions.
+%
+% TODO: Core implementation question
+% What observations, open data products, benchmark events/intervals, and physics-informed models are needed to make Sun-to-planet coupling predictive?
+%
+% TODO: Main points
+% - Multipoint observations are needed to characterize solar-wind and heliospheric structure.
+% - Coordinated observational studies are needed across solar, heliospheric, and geospace domains.
+% - Existing flyby and planetary data can help extend comparative studies.
+% - Benchmark events and benchmark intervals are needed for model comparison and validation.
+% - Open, interoperable, AI-ready datasets are needed.
+% - AI/ML can improve detection, reconstruction, surrogate modeling, and model error characterization, but should remain physically interpretable.
+% - Uncertainty propagation should be included from solar observations through heliospheric modeling to geospace/planetary response.
+%
+% TODO: Expected output
+% - Capability map table with columns: Science question | Needed observations | Needed models | Needed data products | Validation metric.
+
+Placeholder synthesis text. This section should identify the observations, open data products, benchmark events and intervals, physics-informed models, AI/ML approaches, and uncertainty-propagation workflows needed to make Sun-to-planet coupling predictive \cite{placeholder}.
+
+\begin{table}[h]
+\caption{Capability map.}
+\label{tab:capability-map}
+\centering
+\begin{tabular}{p{0.20\textwidth} p{0.20\textwidth} p{0.18\textwidth} p{0.20\textwidth} p{0.14\textwidth}}
+\hline
+Science question & Needed observations & Needed models & Needed data products & Validation metric \\
+\hline
+3D heliospheric drivers & Multipoint remote and in situ observations & Coronal-heliospheric reconstruction & Event-level driver products with uncertainty & Arrival time and field orientation \\
+Coupled geospace response & Solar-wind, magnetospheric, ionospheric, thermospheric, radiation-belt observations & Coupled geospace models & Driver-response benchmark datasets & Energy partitioning and response skill \\
+Background state and preconditioning & Long-duration solar, solar-wind, and geospace monitoring & Data-assimilative climatology and recovery models & Solar-cycle and quiet-time intervals & Background-state error \\
+Comparative planetary response & Flyby, orbiter, and planetary-context observations & Comparative response models & Cross-planet response metrics & Transferability across environments \\
+\hline
+\end{tabular}
+\end{table}
+
+\section{Community Recommendations and Near-Term Implementation}
+% TODO: Purpose
+% Turn the science goals and capability needs into actionable community recommendations.
+%
+% TODO: Main recommendations
+% 1. Develop benchmark events and intervals, including both transient events and quiet-time / solar-minimum intervals.
+% 2. Improve 3D characterization of heliospheric drivers, prioritizing CME/ICME plasma and magnetic structure, uncertainty, and evolution.
+% 3. Connect heliospheric drivers to coupled geospace response, linking magnetosphere, ionosphere, thermosphere, radiation belts, and plasmasphere.
+% 4. Link background state and transient response, treating solar-cycle phase, solar minimum, preconditioning, and recovery as essential parts of prediction.
+% 5. Create open, AI-ready, uncertainty-aware workflows using benchmark datasets, data assimilation, model intercomparison, and interpretable ML.
+%
+% TODO: Expected output
+% - Recommendation table with columns: Recommendation | Addresses science goal | Concrete product | Near-term action | Possible owner community.
+% - Short implementation path with near-term, mid-term, and longer-term actions.
+% - Placeholder paragraph on post-symposium writing plan and community review.
+
+Placeholder synthesis text. This section should convert the science goals into near-term, mid-term, and longer-term community actions that can be pursued after the symposium.
+
+\begin{table}[h]
+\caption{Recommendation table.}
+\label{tab:recommendations}
+\centering
+\begin{tabular}{p{0.20\textwidth} p{0.16\textwidth} p{0.20\textwidth} p{0.20\textwidth} p{0.16\textwidth}}
+\hline
+Recommendation & Addresses science goal & Concrete product & Near-term action & Possible owner community \\
+\hline
+Develop benchmark events and intervals & Goals 1--3 & Transient and quiet-time benchmark set & Identify candidate events and intervals & Solar, heliospheric, and geospace communities \\
+Improve 3D characterization of heliospheric drivers & Goal 1 & CME/ICME driver products with uncertainty & Define required observables and metadata & Solar and heliospheric modeling communities \\
+Connect heliospheric drivers to coupled geospace response & Goal 2 & End-to-end response framework & Map driver variables to geospace state variables & Heliophysics and geospace communities \\
+Link background state and transient response & Goal 3 & Preconditioning and recovery metrics & Select solar-minimum and recovery intervals & Geospace climatology and radiation-belt communities \\
+Create open, AI-ready, uncertainty-aware workflows & Goals 1--4 & Interoperable datasets and validation workflows & Establish data standards and model-comparison protocol & Cross-domain data and modeling communities \\
+\hline
+\end{tabular}
+\end{table}
+
+Near-term actions should focus on assembling candidate benchmark events and intervals, identifying required variables, and defining shared data products. Mid-term actions should develop model-comparison protocols, coupled response metrics, and uncertainty-propagation workflows. Longer-term actions should mature these products into sustained community infrastructure for predictive Sun-to-planet coupling.
+
+Placeholder post-symposium writing plan and community review paragraph. The writing team should convert symposium discussion into a revised outline, circulate section assignments, solicit cross-domain feedback, and converge on a community-reviewed manuscript draft.
+
+\section*{Acknowledgments}
+Acknowledgments placeholder. Include symposium support, community contributors, institutional support, and funding information as appropriate.
+
 \section*{Open Research Statement}
-
-Statement text.
-
-
+Open research statement placeholder. Identify open data, software, benchmark-event lists, model outputs, and community products used or produced by this white paper.
 
 % Bibliography
-%\cite{*} % If you have uncited bibliography items.
-%
-\bibliography{wiley} % Replace ``wiley'' with your bibliography's file name.  Do not specify its extension, e.g., .bib.
-
-
-
-% Appendix sections are numbered differently than article ones.
-\appendix  % Put this first.
-
-% Can repeat for each appendix.
-\section{Appendix 1}
-Appendix text.
-
-% You can use subsection, etc.
-\subsection{Appendix 1 Subsection}
-Appendix text.
-
-
+% Add cited references to references.bib as the manuscript matures.
+\bibliography{references}
 
 \end{document}
-
-
-
-
-
